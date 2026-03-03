@@ -9,7 +9,7 @@ export function ExperienceSection() {
     >
       <h2
         id="experience-heading"
-        className="text-xs font-mono uppercase tracking-[0.18em] text-cyan-300"
+        className="text-xs font-mono uppercase tracking-[0.18em] text-[#e2e8f0]"
       >
         Experience
       </h2>
@@ -21,22 +21,22 @@ export function ExperienceSection() {
           >
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <div>
-                <h3 className="font-semibold text-slate-50">
+                <h3 className="font-semibold text-[#e2e8f0]">
                   {role.title}
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs text-[#e2e8f0]">
                   {role.company}
                   {role.location ? ` · ${role.location}` : null}
                 </p>
               </div>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-[#e2e8f0]">
                 {formatDate(role.startDate)} –{" "}
                 {role.endDate === "Present"
                   ? "Present"
                   : formatDate(role.endDate)}
               </p>
             </div>
-            <ul className="mt-3 space-y-1 text-xs text-slate-300">
+            <ul className="mt-3 space-y-1 text-xs text-[#e2e8f0]">
               {role.bullets.map((item) => (
                 <li key={item}>• {item}</li>
               ))}
@@ -46,7 +46,7 @@ export function ExperienceSection() {
                 {role.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full bg-slate-800 px-2 py-0.5 text-[11px] text-slate-200"
+                    className="rounded-full bg-slate-800 px-2 py-0.5 text-[11px] text-[#e2e8f0]"
                   >
                     {tech}
                   </span>

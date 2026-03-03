@@ -10,11 +10,11 @@ export function ProjectsSection() {
       <div className="flex items-baseline justify-between gap-2">
         <h2
           id="projects-heading"
-          className="text-xs font-mono uppercase tracking-[0.18em] text-cyan-300"
+          className="text-xs font-mono uppercase tracking-[0.18em] text-[#e2e8f0]"
         >
           Projects
         </h2>
-        <p className="text-[11px] text-slate-400">
+        <p className="text-[11px] text-[#e2e8f0]">
           Selected work — we’ll refine this with your resume.
         </p>
       </div>
@@ -22,16 +22,16 @@ export function ProjectsSection() {
         {projects.map((project) => (
           <article
             key={project.slug}
-            className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-sm shadow-sm shadow-black/40 transition hover:border-cyan-400/80 hover:shadow-lg hover:shadow-cyan-500/20"
+            className="flex h-full flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-sm shadow-sm shadow-black/40 transition hover:border-slate-600 hover:shadow-lg"
           >
             <div className="space-y-2">
-              <h3 className="text-sm font-semibold text-slate-50">
+              <h3 className="text-sm font-semibold text-[#e2e8f0]">
                 {project.name}
               </h3>
-              <p className="text-xs text-slate-300">
+              <p className="text-xs text-[#e2e8f0]">
                 {project.description}
               </p>
-              <ul className="mt-2 space-y-1 text-xs text-slate-300">
+              <ul className="mt-2 space-y-1 text-xs text-[#e2e8f0]">
                 {project.highlights.map((item) => (
                   <li key={item}>• {item}</li>
                 ))}
@@ -42,7 +42,7 @@ export function ProjectsSection() {
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full bg-slate-800 px-2 py-0.5 text-[11px] text-slate-200"
+                    className="rounded-full bg-slate-800 px-2 py-0.5 text-[11px] text-[#e2e8f0]"
                   >
                     {tech}
                   </span>
@@ -54,7 +54,7 @@ export function ProjectsSection() {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-cyan-300 underline-offset-2 hover:text-cyan-200 hover:underline"
+                    className="text-[#e2e8f0] underline-offset-2 hover:opacity-90 hover:underline"
                   >
                     Live
                   </a>
@@ -64,7 +64,7 @@ export function ProjectsSection() {
                     href={project.sourceCodeUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-cyan-300 underline-offset-2 hover:text-cyan-200 hover:underline"
+                    className="text-[#e2e8f0] underline-offset-2 hover:opacity-90 hover:underline"
                   >
                     Code
                   </a>

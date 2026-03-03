@@ -20,7 +20,7 @@ export const profile: Profile = {
   title: "Full-Stack Software Engineer",
   location: "Jersey City, NJ, USA",
   summary:
-    "Full-Stack Software Engineer with 4+ years of experience building and shipping production-ready applications across frontend and backend systems. Strong focus on API design, database-driven applications, and modern web interfaces using Java, Spring Boot, JavaScript, and Vue.js.",
+    "I build reliable, scalable applications across the full stack — from APIs and databases to modern web interfaces.",
   currentRole:
     "MS Computer Science student at Stevens Institute of Technology · Fulbright Scholar",
   socialLinks: [

@@ -9,11 +9,11 @@ export function AboutSection() {
     >
       <h2
         id="about-heading"
-        className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300"
+        className="text-sm font-semibold uppercase tracking-[0.2em] text-[#e2e8f0]"
       >
         About
       </h2>
-      <p className="max-w-2xl text-pretty text-sm text-slate-200/90 sm:text-base">
+      <p className="max-w-2xl text-pretty text-sm text-[#e2e8f0] sm:text-base">
         {profile.summary}
       </p>
     </section>
