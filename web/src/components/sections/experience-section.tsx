@@ -56,6 +56,19 @@ export function ExperienceSection() {
           </article>
         ))}
       </div>
+      <div className="pt-4">
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center text-xs font-semibold text-[#e2e8f0] hover:underline underline-offset-4"
+        >
+          View Full Resume
+          <span aria-hidden="true" className="ml-1">
+            →
+          </span>
+        </a>
+      </div>
     </section>
   );
 }
