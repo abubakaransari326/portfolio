@@ -9,7 +9,7 @@ export function SkillsSection() {
     >
       <h2
         id="skills-heading"
-        className="text-xs font-mono uppercase tracking-[0.18em] text-[#e2e8f0]"
+        className="text-xs font-mono uppercase tracking-[0.18em] text-[#e2e8f0] lg:hidden"
       >
         Skills
       </h2>
@@ -17,7 +17,7 @@ export function SkillsSection() {
         {skillGroups.map((group) => (
           <div
             key={group.id}
-            className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-sm shadow-sm shadow-black/40"
+            className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs shadow-sm shadow-black/40"
           >
             <h3 className="text-xs font-semibold uppercase tracking-wide text-[#e2e8f0]">
               {group.label}
@@ -26,7 +26,7 @@ export function SkillsSection() {
               {group.skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className={`rounded-full border px-2 py-0.5 text-[11px] ${
+                  className={`rounded-full border px-2 py-0.5 text-[10px] ${
                     skill.highlight
                       ? "border-slate-400 bg-slate-700/50 text-[#e2e8f0]"
                       : "border-slate-700 bg-slate-800 text-[#e2e8f0]"

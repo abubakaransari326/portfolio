@@ -20,13 +20,13 @@ export function CursorSpotlight() {
 
   return (
     <div
-      className="pointer-events-none fixed inset-0 z-0"
+      className="pointer-events-none fixed inset-0 z-50"
       aria-hidden
       style={{
         background: `radial-gradient(
-          circle clamp(28rem, 55vw, 45rem) at ${position.x}px ${position.y}px,
-          rgba(17, 30, 64, 0.9) 0%,
-          rgba(17, 30, 64, 0.3) 35%,
+          circle clamp(34rem, 64vw, 55rem) at ${position.x}px ${position.y}px,
+          rgba(50, 80, 140, 0.35) 0%,
+          rgba(40, 70, 130, 0.15) 40%,
           transparent 70%
         )`,
       }}
