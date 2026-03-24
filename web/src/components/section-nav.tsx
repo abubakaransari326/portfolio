@@ -57,7 +57,7 @@ export function SectionNav() {
       {/* Mobile: horizontal rail */}
       <nav aria-label="Sections" className="lg:hidden">
         {/* Extra vertical padding avoids clipping chip tops when the row scrolls horizontally */}
-        <ul className="flex snap-x snap-mandatory gap-1.5 overflow-x-auto px-0.5 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+        <ul className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 py-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {sections.map(({ id, label }) => {
             const isActive = activeId === id;
             return (
@@ -66,8 +66,8 @@ export function SectionNav() {
                   href={`#${id}`}
                   className={`inline-flex min-h-9 items-center justify-center rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-wide transition-colors motion-reduce:transition-none sm:min-h-10 sm:px-3 sm:py-1.5 sm:text-[10px] sm:tracking-wider ${
                     isActive
-                      ? "bg-[#5EEAD5]/20 text-[#5EEAD5] ring-1 ring-[#5EEAD5]/40 ring-offset-2 ring-offset-[#0f172a]"
-                      : "bg-slate-800/80 text-slate-400 ring-1 ring-slate-700/80 ring-offset-2 ring-offset-[#0f172a] active:text-[#e2e8f0]"
+                      ? "bg-[#5EEAD5]/20 text-[#5EEAD5] ring-1 ring-[#5EEAD5]/40 ring-offset-1 ring-offset-[#0f172a] sm:ring-offset-2"
+                      : "bg-slate-800/80 text-slate-400 ring-1 ring-slate-700/80 ring-offset-1 ring-offset-[#0f172a] active:text-[#e2e8f0] sm:ring-offset-2"
                   }`}
                 >
                   {label}
