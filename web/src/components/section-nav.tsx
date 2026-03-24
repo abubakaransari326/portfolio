@@ -9,13 +9,15 @@ const sections = [
   { id: "skills", label: "Skills" },
 ] as const;
 
+type SectionId = (typeof sections)[number]["id"];
+
 export function SectionNav() {
-  const [activeId, setActiveId] = useState<string>(sections[0].id);
+  const [activeId, setActiveId] = useState<SectionId>(sections[0].id);
 
   useEffect(() => {
     const updateActive = () => {
       const viewportH = window.innerHeight;
-      let bestId = sections[0].id;
+      let bestId: SectionId = sections[0].id;
       let bestVisible = -1;
       let bestOrder = -1;
 
