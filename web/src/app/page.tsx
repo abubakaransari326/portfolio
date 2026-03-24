@@ -4,7 +4,6 @@ import { AboutSection } from "@/components/sections/about-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { SkillsSection } from "@/components/sections/skills-section";
-import { ContactSection } from "@/components/sections/contact-section";
 
 export default function Home() {
   return (
@@ -21,6 +20,18 @@ export default function Home() {
         <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
+        <p className="text-xs leading-relaxed text-[#94a3b8] sm:text-sm">
+          Layout and visual design take significant inspiration from{" "}
+          <a
+            href="https://brittanychiang.com"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-[#5EEAD5] underline-offset-2 transition hover:underline"
+          >
+            brittanychiang.com
+          </a>
+          .
+        </p>
       </div>
     </div>
   );
