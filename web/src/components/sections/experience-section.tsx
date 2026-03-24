@@ -21,7 +21,7 @@ export function ExperienceSection() {
           >
             <div className="grid gap-4 sm:grid-cols-[minmax(0,8rem)_minmax(0,1fr)] sm:items-start sm:gap-6">
               <div className="sm:pt-0.5">
-                <p className="whitespace-nowrap text-xs font-medium tabular-nums text-[#94a3b8] sm:whitespace-normal sm:text-sm">
+                <p className="text-xs font-medium tabular-nums leading-snug text-[#94a3b8] sm:text-sm">
                   {formatDateRange(role)}
                 </p>
               </div>
