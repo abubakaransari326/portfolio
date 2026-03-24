@@ -7,7 +7,7 @@ import { SkillsSection } from "@/components/sections/skills-section";
 
 export default function Home() {
   return (
-    <div className="space-y-12 lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.6fr)] lg:gap-24 lg:space-y-0 xl:gap-32">
+    <div className="space-y-12 lg:grid lg:grid-cols-[minmax(16rem,22.5rem)_minmax(0,1fr)] lg:gap-24 lg:space-y-0 xl:gap-32">
       {/* Left column: sticky profile / hero */}
       <div className="flex flex-col lg:-ml-[74px] lg:sticky lg:top-[5.9375rem] lg:min-h-[calc(100vh-5.9375rem)] lg:max-h-[calc(100vh-5.9375rem)] lg:overflow-y-auto lg:self-start">
         <HeroSection />

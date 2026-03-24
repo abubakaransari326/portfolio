@@ -27,7 +27,7 @@ export default function RootLayout({
         <CursorSpotlight />
         <div id="top" className="relative z-10 flex min-h-screen flex-col">
           <main className="flex-1 bg-transparent">
-            <div className="mx-auto max-w-5xl px-4 pt-[4.6875rem] pb-10 sm:px-6 sm:pt-[5.9375rem] sm:pb-12">
+            <div className="mx-auto max-w-6xl px-4 pt-[4.6875rem] pb-10 sm:px-6 sm:pt-[5.9375rem] sm:pb-12">
               {children}
             </div>
           </main>
