@@ -20,7 +20,7 @@ export function HeroSection() {
       <p className="mt-4 max-w-prose leading-normal text-[#e2e8f0] sm:max-w-xs">
         {profile.summary}
       </p>
-      <div className="mt-6 lg:mt-[80px]">
+      <div className="mt-8 lg:mt-[80px]">
         <SectionNav />
       </div>
     </section>

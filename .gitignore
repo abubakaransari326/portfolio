@@ -1,0 +1,5 @@
+# App package manager files live under web/
+/package-lock.json
+/node_modules
+
+.DS_Store
