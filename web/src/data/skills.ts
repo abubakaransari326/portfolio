@@ -91,6 +91,8 @@ export const skillGroups: SkillGroup[] = [
     label: "Tools & Platforms",
     skills: [
       { name: "Git", level: "advanced", highlight: true },
+      { name: "Cursor", level: "advanced" },
+      { name: "GitHub Copilot", level: "advanced" },
       { name: "Docker", level: "intermediate" },
       { name: "Kubernetes", level: "beginner" },
       { name: "IntelliJ IDEA", level: "advanced" },

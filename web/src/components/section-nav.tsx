@@ -13,26 +13,38 @@ export function SectionNav() {
   const [activeId, setActiveId] = useState<string | null>("about");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const threshold = 120;
-      let current: string | null = null;
+    const updateActive = () => {
+      const viewportH = window.innerHeight;
+      let bestId = sections[0].id;
+      let bestVisible = -1;
+      let bestOrder = -1;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i].id);
+      for (let i = 0; i < sections.length; i++) {
+        const { id } = sections[i];
+        const el = document.getElementById(id);
         if (!el) continue;
+
         const rect = el.getBoundingClientRect();
-        if (rect.top <= threshold) {
-          current = sections[i].id;
-          break;
+        const visible = Math.min(rect.bottom, viewportH) - Math.max(rect.top, 0);
+        const clamped = Math.max(0, visible);
+
+        if (clamped > bestVisible || (clamped === bestVisible && clamped > 0 && i > bestOrder)) {
+          bestVisible = clamped;
+          bestId = id;
+          bestOrder = i;
         }
       }
 
-      setActiveId(current ?? sections[0].id);
+      setActiveId(bestId);
     };
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    updateActive();
+    window.addEventListener("scroll", updateActive, { passive: true });
+    window.addEventListener("resize", updateActive);
+    return () => {
+      window.removeEventListener("scroll", updateActive);
+      window.removeEventListener("resize", updateActive);
+    };
   }, []);
 
   return (

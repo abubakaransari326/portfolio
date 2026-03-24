@@ -17,19 +17,19 @@ export function SkillsSection() {
         {skillGroups.map((group) => (
           <div
             key={group.id}
-            className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs shadow-sm shadow-black/40"
+            className="group rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-xs shadow-sm shadow-black/40 transition-[border-color,box-shadow] duration-200 motion-reduce:transition-none hover:border-[#5EEAD5] hover:shadow-[0_0_28px_-6px_rgba(94,234,213,0.22)]"
           >
-            <h3 className="text-xs font-semibold uppercase tracking-wide text-[#e2e8f0]">
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-[#e2e8f0] transition-colors duration-200 motion-reduce:transition-none group-hover:text-[#5EEAD5]">
               {group.label}
             </h3>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {group.skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className={`rounded-full border px-2 py-0.5 text-[10px] ${
+                  className={`rounded-full px-2 py-0.5 text-[10px] text-[#5EEAD5] ${
                     skill.highlight
-                      ? "border-slate-400 bg-slate-700/50 text-[#e2e8f0]"
-                      : "border-slate-700 bg-slate-800 text-[#e2e8f0]"
+                      ? "bg-[#5EEAD5]/20"
+                      : "bg-slate-800"
                   }`}
                 >
                   {skill.name}
